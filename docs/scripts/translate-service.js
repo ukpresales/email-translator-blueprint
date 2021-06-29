@@ -24,8 +24,7 @@ const languageCodeMapping = {
 
 export default {
     translateText(text, language, callback){
-        let language_code = languageCodeMapping[language] ? 
-                    languageCodeMapping[language] : language;
+        let language_code = languageCodeMapping[language] || language;
 
         let data = {
             raw_text: text,
