@@ -147,7 +147,11 @@ This Genesys Cloud Developer Blueprint provides instructions for building an ema
 
 ### Set up an email interaction
 
-1. Log in to your Genesys Cloud organization and add an email. For more information, see [Send and receive emails directly with the myPureCloud.com domain](https://help.mypurecloud.com/articles/send-and-receive-emails-directly-with-the-mypurecloud-com-domain/ "Opens the Send and receive emails directly with the myPureCloud.com domain article") in the Genesys Cloud Resource Center.
+1. Log in to your Genesys Cloud organization and add a domain if you do not already have one.
+2. Add an email address to the domain.
+  * Under Email Routing, select the queue you specified when you [installed and activated the Email Translator](#install-and-activate-the-Email-Translator-in-Genesys-Cloud "Goes to the Install and activate the Email Translator in Genesys Cloud section").
+
+For more information, see [Send and receive emails directly with the myPureCloud.com domain](https://help.mypurecloud.com/articles/send-and-receive-emails-directly-with-the-mypurecloud-com-domain/ "Opens the Send and receive emails directly with the myPureCloud.com domain article") in the Genesys Cloud Resource Center.
 
 ### Test the solution
 
