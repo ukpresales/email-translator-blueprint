@@ -57,7 +57,7 @@ This Genesys Cloud Developer Blueprint provides instructions for building an ema
 * [Set up AWS Translate](#set-up-aws-translate "Goes to the Set up AWS Translate section")
 * [Install and activate the Email Translator in Genesys Cloud](#install-and-activate-the-email-translator-in-genesys-cloud "Goes to the Install and activate the Email Translator in Genesys Cloud section")
 * [Host and run the Node.js app server](#host-and-run-the-node-js-app-server "Goes to the Host and run the Node.js app server section")
-* [Setup email interaction](#setup-email-interaction "Goes to the Setup email interaction section")
+* [Setup email interaction](#set-up-an-email-interaction "Goes to the Set up an email interaction section")
 * [Test the solution](#test-the-solution "Goes to the Test the solution section")
 
 ### Download the repository containing the project files
@@ -145,22 +145,27 @@ This Genesys Cloud Developer Blueprint provides instructions for building an ema
 2. Switch to the directory where the files for your Email Translator project are located and install the dependencies in the local node-modules folder. In the command line, type `npm install`.
 3. To run the server locally, in the command line type `node run-local.js`.
 
-### Setup email interaction
+### Set up an email interaction
 
-1. Log in to your Genesys Cloud organization and add an email. For more information, see [Send and receive emails directly with the myPureCloud.com domain](https://help.mypurecloud.com/articles/send-and-receive-emails-directly-with-the-mypurecloud-com-domain/ "Opens the Send and receive emails directly with the myPureCloud.com domain article") in the Genesys Cloud Resource Center.
+1. Log in to your Genesys Cloud organization and add a domain if you do not already have one.
+2. Add an email address to the domain.
+  * Under Email Routing, select the queue you specified when you [installed and activated the Email Translator](#install-and-activate-the-Email-Translator-in-Genesys-Cloud "Goes to the Install and activate the Email Translator in Genesys Cloud section").
+
+For more information, see [Send and receive emails directly with the myPureCloud.com domain](https://help.mypurecloud.com/articles/send-and-receive-emails-directly-with-the-mypurecloud-com-domain/ "Opens the Send and receive emails directly with the myPureCloud.com domain article") in the Genesys Cloud Resource Center.
+
 ### Test the solution
 
-1. To start an email interaction as a customer, send an email to your configured email address.
+1. To start an email interaction as a customer, send an email to the email address you configured earlier.
    ![Send email](images/send-email.png "Send email")
 2. To answer the email as an agent, in your Genesys Cloud organization change your status to **On Queue** and then answer the incoming interaction.
   ![Email interaction](images/email-interaction.png "Incoming email interaction")
-3. To open the Email Translator, click the **Email Translator** button, which appears in the agent's toolbar.
+3. To open the Email Translator, click the **Email Translator** button which appears in the agent's toolbar.
 4. Upon loading the Email Translator, the agent can see a message bubble with the translated message from the customer.
-  
-  :::primary
-  **Tip**: The **Copy** button translates the agent's response to the customer's language and adds the translated message in the clipboard. The agent can then paste the translated message in the email response window before sending the message.
 
-  The **Send** button automatically sends the agent's translated message to the customer and ends the interaction.
+  :::primary
+  **Tip**: The **Copy** button translates the agent's response into the customer's language and adds the translated response to the clipboard. The agent can then paste the translated response in the email response window before sending it.
+
+  The **Send** button sends the agent's translated response to the customer and ends the interaction.
   :::
 
   ![Translated email](images/email-translate.png "Translated email")
