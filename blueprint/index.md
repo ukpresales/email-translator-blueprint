@@ -99,10 +99,10 @@ This Genesys Cloud Developer Blueprint provides instructions for building an ema
 5. In the **Application URL** box, type the URL of the web application. Be sure to specify the full URL, beginning with `https:`.
 
   ```
-   https://localhost/?conversationid={{pcConversationId}}&language={{pcLangTag}}
+   https://localhost/?conversationid={{gcConversationId}}&language={{gcLangTag}}
   ```
 
-   The `pcConversationId` parameter determines the conversation interaction. The `pcLangTag` parameter determines the agent's language in the Email Translator solution.
+   The `gcConversationId` parameter determines the conversation interaction. The `gcLangTag` parameter determines the agent's language in the Email Translator solution.
 
 6. To limit access to specific groups of agents, in **Group Filtering**, select the groups that can use the widget.
 7. To limit access to specific queues, click **Select Queues** and select the queues that can use the widget.
